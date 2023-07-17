@@ -3,22 +3,22 @@ kind: Deployment
 metadata:
   name: hemanth-demoapp
   labels: 
-     app: regapp
+     app: regapp2
 
 spec:
   replicas: 2 
   selector:
     matchLabels:
-      app: regapp
+      app: regapp2
 
   template:
     metadata:
       labels:
-        app: regapp
+        app: regapp2
     spec:
       containers:
       - name: regapp
-        image: hemanth1211/regapp
+        image: thamakarthik/regapp2
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
